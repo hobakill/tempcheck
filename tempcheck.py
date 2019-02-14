@@ -24,6 +24,8 @@ def wx(location):
     wx = json.dumps({
         "current_temp": info.temperature,
         "current_dew_point": info.dewPoint,
+        "current_wind_speed": info.windSpeed,
+        "wind_bearing": info.windBearing,
         "todays_high": info['daily']['data'][0]['temperatureHigh'],
         "summary": info['hourly']['summary']})
     return wx
